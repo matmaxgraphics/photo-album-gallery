@@ -1,0 +1,90 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body{
+	background-color: #1a1a1a;
+	color: #fff;
+}
+a{
+	text-decoration: none;
+	color: inherit;
+}
+nav{
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+	padding: 24px;
+}
+nav .logo{
+	font-size: 18px;
+}
+nav button{
+	margin-right: 48px;
+}
+.container{
+	width: 100%;
+}
+.wrapper{
+	background-color: white;
+	width: 90%;
+	padding: 24px;
+	margin: auto;
+}
+.wrapper .btn-group{
+	margin: 24px 0 48px 0;
+}
+.wrapper .btn-group button{
+	margin-right: 24px;
+}
+.gallery{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	cursor: pointer;
+    max-width: 1200px;
+    margin: auto;
+}
+.img-container{
+	position: relative;
+  	flex: 5%;
+  	margin-bottom: 12px;
+}
+.img-container .image{
+	display: block;
+	width:250px;
+	height: 200px;
+	opacity: 1;
+	transition: .5s;
+	backface-visibility: hidden;
+	object-fit: cover;
+	object-position: center;
+}
+.text-container{
+	transition: .5s ease;
+	opacity: 0;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	text-align: center;
+}
+.img-container:hover .image{
+	opacity: 0.3s;
+}
+.img-container:hover .text-container{
+	opacity: 1;
+}
+button{
+	background-color: #222;
+	color: #fff;
+	font-size: 16px;
+	outline: none;
+	border: unset;
+	border-radius: 8px;
+	width: auto;
+	padding: 12px 48px;
+}
