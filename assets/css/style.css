@@ -1,90 +1,190 @@
-*{
+* {
 	margin: 0;
 	padding: 0;
-	box-sizing: border-box;
-}
-body{
-	background-color: #1a1a1a;
-	color: #fff;
+  box-sizing: border-box;
 }
 a{
-	text-decoration: none;
-	color: inherit;
+  text-decoration: none;
+  color: inherit;
+}
+h1, h2, h3, h4, h5{
+	color: #222;
+}
+h1{
+	font-size: 48px;
+}
+h2{
+	font-size: 36px;
+}
+h4{
+	font-size: 24px;
+	font-weight: 500;
+}
+p{
+	color: #717070;
+	font-size: 16px;
+}
+body {
+  background-color: #1a1a1a;
+  padding: 20px;
+  font-family: 'Metropolis', sans-serif;
 }
 nav{
-	display: flex;
-	justify-content: space-between;
-	width: 100%;
-	padding: 24px;
+  display: flex;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: auto;
 }
 nav .logo{
-	font-size: 18px;
+  font-size: 24px;
+  font-weight: bold;
+  color: white;
 }
-nav button{
-	margin-right: 48px;
+nav .nav-btn button{
+  background-color: #D11C1C;
 }
-.container{
-	width: 100%;
+nav .nav-btn button:hover{
+  background-color: #BA5A5A;
 }
-.wrapper{
-	background-color: white;
-	width: 90%;
-	padding: 24px;
-	margin: auto;
+
+/* Center website */
+.main {
+  max-width: 1200px;
+  margin: auto;
+  background-color: #fff;
 }
-.wrapper .btn-group{
-	margin: 24px 0 48px 0;
+.btn-group{
+  margin: 36px;
+  padding-top: 48px;
 }
-.wrapper .btn-group button{
-	margin-right: 24px;
+.btn-group button{
+  margin-right: 8px;
 }
-.gallery{
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: center;
-	align-items: center;
-	cursor: pointer;
-    max-width: 1200px;
-    margin: auto;
+.row {
+  margin: 12px;
 }
-.img-container{
-	position: relative;
-  	flex: 5%;
-  	margin-bottom: 12px;
+
+/* Add padding BETWEEN each column */
+.row,
+.row > .column {
+  padding: 8px;
 }
-.img-container .image{
-	display: block;
-	width:250px;
-	height: 200px;
-	opacity: 1;
-	transition: .5s;
-	backface-visibility: hidden;
-	object-fit: cover;
-	object-position: center;
+
+/* Create three equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 25%;
+  display: none; /* Hide all elements by default */
 }
-.text-container{
-	transition: .5s ease;
-	opacity: 0;
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-	-ms-transform: translate(-50%, -50%);
-	text-align: center;
+
+/* Clear floats after rows */ 
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
 }
-.img-container:hover .image{
-	opacity: 0.3s;
+
+/* Content */
+
+.content {
+  background-color: white;
+  padding: 10px;
+  text-align: center;
 }
-.img-container:hover .text-container{
-	opacity: 1;
+.content img{
+  margin-bottom: 12px;
+}
+.link-btn{
+  color: #000;
+  text-decoration: none;
+  font-size: 16px;
+
+}
+.link-btn:hover{
+  color: #222;
+  text-decoration: underline;
+}
+/* The "show" class is added to the filtered elements */
+.show {
+  display: block;
+}
+
+/* Style the buttons */
+.btn {
+  border: none;
+  outline: none;
+  padding: 16px 18px;
+  background-color: #c4c4c4;
+  cursor: pointer;
+  color: white;
+  border-radius: 8px;
+}
+
+
+.btn:hover {
+  background-color: #ddd;
 }
 button{
-	background-color: #222;
-	color: #fff;
-	font-size: 16px;
-	outline: none;
-	border: unset;
-	border-radius: 8px;
-	width: auto;
-	padding: 12px 48px;
+  font-family: 'Metropolis', sans-serif;
+}
+
+.btn.active {
+  background-color: #D11C1C;
+  color: white;
+}
+@media only screen and (max-width: 1000px){
+  .row{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    cursor: pointer;
+    float: none;
+  }
+  .column{
+    min-width: 250px;
+    flex: 25%;
+  }
+  .column img{
+    object-fit: cover;
+    object-position: center;
+  }
+}
+@media only screen and (max-width: 540px){
+  .btn-group button{
+    margin-bottom: 12px;
+  }
+}
+
+
+/*VIEW PHOTO PAGE STYLING*/
+aside{
+	display: flex;
+	justify-content: flex-end;
+	margin-top: 24px;
+	padding: 24px;
+}
+aside .edit-btn{
+	background-color: #1a1a1a;
+}
+.wrapper{
+	max-width: 700px;
+	margin: auto;
+	padding: 48px;
+	margin-top: 48px;
+}
+
+.wrapper section{
+	margin-top: 60px;
+}
+.image-container{
+	text-align: center;
+}
+.image-container img{
+	width: 450px;
+	height: auto;
+	margin-top: 36px;
+	margin-bottom: 12px;
+}
+.wrapper h4{
+	margin-bottom: 12px;
 }

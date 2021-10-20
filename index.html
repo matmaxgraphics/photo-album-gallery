@@ -1,130 +1,15 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <title>Photo Album</title>
+  <link rel="stylesheet" href="assets/css/style.css">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-* {
-  box-sizing: border-box;
-}
-a{
-  text-decoration: none;
-  color: inherit;
-}
-body {
-  background-color: #1a1a1a;
-  padding: 20px;
-  font-family: 'Metropolis', sans-serif;
-}
-nav{
-  display: flex;
-  justify-content: space-between;
-  max-width: 1200px;
-  margin: auto;
-}
-nav .logo{
-  font-size: 24px;
-  font-weight: bold;
-  color: white;
-}
-nav .nav-btn button{
-  background-color: #D11C1C;
-}
-nav .nav-btn button:hover{
-  background-color: #BA5A5A;
-}
-
-/* Center website */
-.main {
-  max-width: 1200px;
-  margin: auto;
-  background-color: #fff;
-}
-.btn-group{
-  margin: 36px;
-  padding-top: 48px;
-}
-.btn-group button{
-  margin-right: 8px;
-}
-.row {
-  margin: 12px;
-}
-
-/* Add padding BETWEEN each column */
-.row,
-.row > .column {
-  padding: 8px;
-}
-
-/* Create three equal columns that floats next to each other */
-.column {
-  float: left;
-  width: 25%;
-  display: none; /* Hide all elements by default */
-}
-
-/* Clear floats after rows */ 
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-/* Content */
-
-.content {
-  background-color: white;
-  padding: 10px;
-  text-align: center;
-}
-.content img{
-  margin-bottom: 12px;
-}
-.link-btn{
-  color: #000;
-  text-decoration: none;
-  font-size: 16px;
-
-}
-.link-btn:hover{
-  color: #222;
-  text-decoration: underline;
-}
-/* The "show" class is added to the filtered elements */
-.show {
-  display: block;
-}
-
-/* Style the buttons */
-.btn {
-  border: none;
-  outline: none;
-  padding: 16px 18px;
-  background-color: #c4c4c4;
-  cursor: pointer;
-  color: white;
-  border-radius: 8px;
-}
-
-
-.btn:hover {
-  background-color: #ddd;
-}
-button{
-  font-family: 'Metropolis', sans-serif;
-}
-
-.btn.active {
-  background-color: #D11C1C;
-  color: white;
-}
-</style>
 </head>
 <body>
 <nav>
   <div class="logo">Photo Album</div>
   <div class="nav-btn">
-    <a href="view-photo.html"><button class="btn"> Add Photo</button></a>
+    <a href="add-photo.html"><button class="btn"> Add Photo</button></a>
   </div>
 </nav>
 <!-- MAIN (Center website) -->
@@ -225,51 +110,7 @@ button{
 <!-- END MAIN -->
 </div>
 
-<script>
-filterSelection("all")
-function filterSelection(c) {
-  var x, i;
-  x = document.getElementsByClassName("column");
-  if (c == "all") c = "";
-  for (i = 0; i < x.length; i++) {
-    removeClass(x[i], "show");
-    if (x[i].className.indexOf(c) > -1) addClass(x[i], "show");
-  }
-}
-
-function addClass(element, name) {
-  var i, arr1, arr2;
-  arr1 = element.className.split(" ");
-  arr2 = name.split(" ");
-  for (i = 0; i < arr2.length; i++) {
-    if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
-  }
-}
-
-function removeClass(element, name) {
-  var i, arr1, arr2;
-  arr1 = element.className.split(" ");
-  arr2 = name.split(" ");
-  for (i = 0; i < arr2.length; i++) {
-    while (arr1.indexOf(arr2[i]) > -1) {
-      arr1.splice(arr1.indexOf(arr2[i]), 1);     
-    }
-  }
-  element.className = arr1.join(" ");
-}
-
-
-// Add active class to the current button (highlight it)
-var btnContainer = document.getElementById("myBtnContainer");
-var btns = btnContainer.getElementsByClassName("btn");
-for (var i = 0; i < btns.length; i++) {
-  btns[i].addEventListener("click", function(){
-    var current = document.getElementsByClassName("active");
-    current[0].className = current[0].className.replace(" active", "");
-    this.className += " active";
-  });
-}
-</script>
+<script src="assets/js/script.js"></script>
 
 </body>
 </html>
