@@ -18,12 +18,28 @@ h2{
 }
 h4{
 	font-size: 24px;
-	font-weight: 500;
+	font-weight: 600;
 }
 p{
 	color: #717070;
 	font-size: 16px;
+  line-height: 1.2;
 }
+
+.input-field, textarea {
+  background-color: #efefef;
+  color: #000;
+  padding: 8px;
+  height: 48px;
+  outline: none;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-family: 'poppins', sans-serif;
+  width: 80%; }
+  textarea{
+    height: 100px;
+  }
 body {
   background-color: #1a1a1a;
   padding: 20px;
@@ -74,7 +90,8 @@ nav .nav-btn button:hover{
 .column {
   float: left;
   width: 25%;
-  display: none; /* Hide all elements by default */
+  display: none;
+  margin-bottom: 12px; /* Hide all elements by default */
 }
 
 /* Clear floats after rows */ 
@@ -87,8 +104,6 @@ nav .nav-btn button:hover{
 /* Content */
 
 .content {
-  background-color: white;
-  padding: 10px;
   text-align: center;
 }
 .content img{
@@ -118,11 +133,13 @@ nav .nav-btn button:hover{
   cursor: pointer;
   color: white;
   border-radius: 8px;
+  transition: 0.3s;
 }
 
 
 .btn:hover {
   background-color: #ddd;
+  transition: 0.3s;
 }
 button{
   font-family: 'Metropolis', sans-serif;
@@ -132,17 +149,18 @@ button{
   background-color: #D11C1C;
   color: white;
 }
+
 @media only screen and (max-width: 1000px){
   .row{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    cursor: pointer;
     float: none;
   }
   .column{
     min-width: 250px;
     flex: 25%;
+    cursor: pointer;
   }
   .column img{
     object-fit: cover;
@@ -163,8 +181,13 @@ aside{
 	margin-top: 24px;
 	padding: 24px;
 }
-aside .edit-btn{
+.edit-btn{
 	background-color: #1a1a1a;
+  transition: 0.3s;
+}
+.edit-btn:hover{
+  background-color: #333;
+  transition: 0.3s;
 }
 .wrapper{
 	max-width: 700px;
@@ -173,18 +196,63 @@ aside .edit-btn{
 	margin-top: 48px;
 }
 
-.wrapper section{
-	margin-top: 60px;
-}
 .image-container{
 	text-align: center;
+  max-width: 450px;
+  height: auto;
 }
 .image-container img{
-	width: 450px;
+	width: 100%;
 	height: auto;
-	margin-top: 36px;
 	margin-bottom: 12px;
 }
 .wrapper h4{
 	margin-bottom: 12px;
+  margin-top: 48px;
+}
+.socials-container .social-icon{
+  margin-right: 24px;
+  color: #1C77D1;
+  font-size: 32px;
+}
+
+.form-fields{
+  margin-top: 60px;
+}
+.form-fields form {
+    width: 80%; 
+}
+.form-fields form div {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 36px; 
+}
+.form-fields form .input-field, .form-fields form textarea {
+margin-top: 8px;
+width: 100%; 
+}
+
+
+.form-fields .add-btn{
+  background-color: #1C77D1;
+}
+.form-fields .add-btn:hover{
+  background-color: #2E547A;
+  transition: 0.3s;
+}
+.form-fields .add-btn{
+  float: right;
+}
+
+.quote-cotainer, .form-fields{
+  margin-bottom: 48px;
+}
+
+@media only screen and (max-width: 700px){
+  .form-fields form {
+    width: 100%; 
+}
+  .input-field, textarea{
+    width: 100%;
+  }
 }
