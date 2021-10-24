@@ -54,7 +54,7 @@ p{
   border-radius: 8px;
   font-size: 16px;
   font-family: 'poppins', sans-serif;
-  width: 80%; }
+  width: 100%; }
   textarea{
     height: 100px;
   }
@@ -108,8 +108,8 @@ nav .nav-btn button:hover{
 .column {
   float: left;
   width: 25%;
-  display: none;
-  margin-bottom: 12px; /* Hide all elements by default */
+  /*display: none;
+*/  margin-bottom: 12px; /* Hide all elements by default */
 }
 
 /* Clear floats after rows */ 
@@ -161,6 +161,7 @@ nav .nav-btn button:hover{
 }
 button{
   font-family: 'Metropolis', sans-serif;
+  border: unset;
 }
 
 .btn.active {
@@ -208,15 +209,20 @@ aside{
   transition: 0.3s;
 }
 .wrapper{
-	max-width: 700px;
-	margin: auto;
+	max-width: 900px;
 	padding: 48px;
 	margin-top: 48px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: left;
+  margin: auto;
 }
 
 .image-container{
 	text-align: center;
-  max-width: 450px;
+  max-width: 400px;
   height: auto;
 }
 .image-container img{
@@ -227,6 +233,10 @@ aside{
 .wrapper h4{
 	margin-bottom: 12px;
   margin-top: 48px;
+  text-align: left;
+}
+.socials-container{
+  text-align: left;
 }
 .socials-container .social-icon{
   margin-right: 24px;
@@ -238,7 +248,7 @@ aside{
   margin-top: 60px;
 }
 .form-fields form {
-    width: 80%; 
+    width: 100%; 
 }
 .form-fields form div {
   display: flex;
@@ -272,5 +282,44 @@ width: 100%;
 }
   .input-field, textarea{
     width: 100%;
+  }
+}
+
+.scroll-left-effect{
+  height: 50px;
+  overflow: hidden;
+  position: relative;
+  background-color: #333;
+  padding: 12px;
+}
+
+footer p{
+  color: #fff;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  text-align: center;
+  /*Animation position effect*/
+  -webkit-transform: translateX(100%);
+  -moz-transform: translateX(100%);
+  transform: translateX(100%);
+  /*Apply aniamtion to the text*/
+  -moz-animation: scroll-left 10s linear infinite;
+  -webkit-animation: scroll-left 10s linear infinite;
+  animation: scroll-left 10s linear infinite;
+}
+
+/*Giving the animation the moving effect*/
+@keyframes scroll-left{
+  0%{
+    -webkit-transform: translateX(100%);
+    -moz-transform: translateX(100%);
+    transform: translateX(100%);
+  }
+  100%{
+    -moz-transform: translateX(-100%);
+    -webkit-transform: translateX(-100%);
+    transform: translateX(-100%);
   }
 }
