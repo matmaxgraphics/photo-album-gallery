@@ -68,17 +68,51 @@ nav{
   justify-content: space-between;
   max-width: 1200px;
   margin: auto;
+  flex-flow: row wrap;
 }
 nav .logo{
   font-size: 24px;
   font-weight: bold;
   color: white;
 }
+nav form{
+  display: flex;
+  align-items: center;
+
+}
+nav .search-bar{
+  width: 100%;
+  padding: 12px;
+}
+nav .search-btn{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #D11C1C;
+  width: 45px;
+  height: 45px;
+  transition: 0.3s;
+  border-radius: 8px;
+  border-width: 0px;
+  color: #fff;
+  float: right;
+  font-size: 18px;
+  margin-left: 12px;
+}
+nav .search-btn:hover{
+  background-color: #BA5A5A;
+}
 nav .nav-btn button{
   background-color: #D11C1C;
 }
 nav .nav-btn button:hover{
   background-color: #BA5A5A;
+}
+
+@media only screen and (max-width: 470px){
+  nav form, .nav-btn{
+    margin-top: 24px;
+  }
 }
 
 /* Center website */
