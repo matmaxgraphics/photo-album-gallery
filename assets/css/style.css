@@ -54,7 +54,7 @@ p{
   border-radius: 8px;
   font-size: 16px;
   font-family: 'poppins', sans-serif;
-  width: 100%; }
+  width: 80%; }
   textarea{
     height: 100px;
   }
@@ -68,51 +68,17 @@ nav{
   justify-content: space-between;
   max-width: 1200px;
   margin: auto;
-  flex-flow: row wrap;
 }
 nav .logo{
   font-size: 24px;
   font-weight: bold;
   color: white;
 }
-nav form{
-  display: flex;
-  align-items: center;
-
-}
-nav .search-bar{
-  width: 100%;
-  padding: 12px;
-}
-nav .search-btn{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #D11C1C;
-  width: 45px;
-  height: 45px;
-  transition: 0.3s;
-  border-radius: 8px;
-  border-width: 0px;
-  color: #fff;
-  float: right;
-  font-size: 18px;
-  margin-left: 12px;
-}
-nav .search-btn:hover{
-  background-color: #BA5A5A;
-}
 nav .nav-btn button{
   background-color: #D11C1C;
 }
 nav .nav-btn button:hover{
   background-color: #BA5A5A;
-}
-
-@media only screen and (max-width: 470px){
-  nav form, .nav-btn{
-    margin-top: 24px;
-  }
 }
 
 /* Center website */
@@ -142,8 +108,8 @@ nav .nav-btn button:hover{
 .column {
   float: left;
   width: 25%;
-  /*display: none;
-*/  margin-bottom: 12px; /* Hide all elements by default */
+  display: none;
+  margin-bottom: 12px; /* Hide all elements by default */
 }
 
 /* Clear floats after rows */ 
@@ -195,7 +161,6 @@ nav .nav-btn button:hover{
 }
 button{
   font-family: 'Metropolis', sans-serif;
-  border: unset;
 }
 
 .btn.active {
@@ -243,20 +208,15 @@ aside{
   transition: 0.3s;
 }
 .wrapper{
-	max-width: 900px;
+	max-width: 700px;
+	margin: auto;
 	padding: 48px;
 	margin-top: 48px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  text-align: left;
-  margin: auto;
 }
 
 .image-container{
 	text-align: center;
-  max-width: 400px;
+  max-width: 450px;
   height: auto;
 }
 .image-container img{
@@ -267,10 +227,6 @@ aside{
 .wrapper h4{
 	margin-bottom: 12px;
   margin-top: 48px;
-  text-align: left;
-}
-.socials-container{
-  text-align: left;
 }
 .socials-container .social-icon{
   margin-right: 24px;
@@ -282,7 +238,7 @@ aside{
   margin-top: 60px;
 }
 .form-fields form {
-    width: 100%; 
+    width: 80%; 
 }
 .form-fields form div {
   display: flex;
@@ -316,44 +272,5 @@ width: 100%;
 }
   .input-field, textarea{
     width: 100%;
-  }
-}
-
-.scroll-left-effect{
-  height: 50px;
-  overflow: hidden;
-  position: relative;
-  background-color: #333;
-  padding: 12px;
-}
-
-footer p{
-  color: #fff;
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  margin: 0;
-  text-align: center;
-  /*Animation position effect*/
-  -webkit-transform: translateX(100%);
-  -moz-transform: translateX(100%);
-  transform: translateX(100%);
-  /*Apply aniamtion to the text*/
-  -moz-animation: scroll-left 10s linear infinite;
-  -webkit-animation: scroll-left 10s linear infinite;
-  animation: scroll-left 10s linear infinite;
-}
-
-/*Giving the animation the moving effect*/
-@keyframes scroll-left{
-  0%{
-    -webkit-transform: translateX(100%);
-    -moz-transform: translateX(100%);
-    transform: translateX(100%);
-  }
-  100%{
-    -moz-transform: translateX(-100%);
-    -webkit-transform: translateX(-100%);
-    transform: translateX(-100%);
   }
 }
