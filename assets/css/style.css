@@ -157,9 +157,31 @@ nav .nav-btn button:hover{
 
 .content {
   text-align: center;
+  position: relative;
 }
 .content img{
   margin-bottom: 12px;
+  width: 100%;
+}
+.content .details-container{
+  position: absolute;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.0) 10%, rgba(0, 0, 0, 1) 90%);
+  padding: 24px;
+  text-align: left;
+  bottom: 0px;
+  height: auto;
+  width: 100%;
+  color: #fff;
+
+}
+.content .details-container p{
+  font-weight: bold;
+  color: #fff;
+}
+.content .details-container small{
+  font-weight: normal;
+  color: #efefef;
+  font-size: 12px;
 }
 .link-btn{
   color: #000;
