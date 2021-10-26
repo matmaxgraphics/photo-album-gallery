@@ -54,7 +54,7 @@ p{
   border-radius: 8px;
   font-size: 16px;
   font-family: 'poppins', sans-serif;
-  width: 100%; }
+  width: 80%; }
   textarea{
     height: 100px;
   }
@@ -89,7 +89,7 @@ nav .search-btn{
   justify-content: center;
   align-items: center;
   background-color: #D11C1C;
-  width: 45px;
+  width: 50px;
   height: 45px;
   transition: 0.3s;
   border-radius: 8px;
@@ -142,8 +142,8 @@ nav .nav-btn button:hover{
 .column {
   float: left;
   width: 25%;
-  /*display: none;
-*/  margin-bottom: 12px; /* Hide all elements by default */
+  display: none;
+  margin-bottom: 12px; /* Hide all elements by default */
 }
 
 /* Clear floats after rows */ 
@@ -195,7 +195,6 @@ nav .nav-btn button:hover{
 }
 button{
   font-family: 'Metropolis', sans-serif;
-  border: unset;
 }
 
 .btn.active {
@@ -243,20 +242,15 @@ aside{
   transition: 0.3s;
 }
 .wrapper{
-	max-width: 900px;
+	max-width: 700px;
+	margin: auto;
 	padding: 48px;
 	margin-top: 48px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  text-align: left;
-  margin: auto;
 }
 
 .image-container{
 	text-align: center;
-  max-width: 400px;
+  max-width: 450px;
   height: auto;
 }
 .image-container img{
@@ -267,10 +261,6 @@ aside{
 .wrapper h4{
 	margin-bottom: 12px;
   margin-top: 48px;
-  text-align: left;
-}
-.socials-container{
-  text-align: left;
 }
 .socials-container .social-icon{
   margin-right: 24px;
@@ -282,7 +272,7 @@ aside{
   margin-top: 60px;
 }
 .form-fields form {
-    width: 100%; 
+    width: 80%; 
 }
 .form-fields form div {
   display: flex;
@@ -325,12 +315,13 @@ width: 100%;
   position: relative;
   background-color: #333;
   padding: 12px;
+  width: 100%;
 }
 
 footer p{
   color: #fff;
   position: absolute;
-  width: 100%;
+  width: 110%;/*adjust this value as the name increases to avoid text wrap on smaller screen*/
   height: 100%;
   margin: 0;
   text-align: center;
