@@ -163,16 +163,19 @@ nav .nav-btn button:hover{
   margin-bottom: 12px;
   width: 100%;
 }
-.content .details-container{
+.content .details-wrapper{
   position: absolute;
-  background: linear-gradient(180deg, rgba(0, 0, 0, 0.0) 10%, rgba(0, 0, 0, 1) 90%);
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.06) 30%, rgba(45, 42, 42, 0.95) 80%);
   padding: 24px;
   text-align: left;
-  bottom: 0px;
-  height: auto;
+  top: 0;
+  height: 93%;
   width: 100%;
   color: #fff;
-
+}
+.content .details-container{
+  position: absolute;
+  bottom: 10px;
 }
 .content .details-container p{
   font-weight: bold;
