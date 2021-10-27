@@ -41,3 +41,14 @@ for (var i = 0; i < btns.length; i++) {
     this.className += " active";
   });
 }
+
+
+//MODAL
+var modal = document.getElementById('modal');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
