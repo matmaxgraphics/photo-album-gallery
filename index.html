@@ -17,6 +17,47 @@
     <a href="add-photo.html"><button class="btn"> Add Photo</button></a>
   </div>
 </nav>
+
+<main class="modal" id="modal">
+  <aside class="dialogue-box">
+      <div class="content-wrapper">
+        <span class="close" onclick="document.getElementById('modal').style.display='none'">&times;</span>
+          <div class="main">
+            <aside class="btn-aside"><a href="edit-photo.html"><button class="btn edit-btn">Edit Photo</button></a></aside>
+              <div class="wrapper">
+                <section class="image-container">
+                  <img src="assets/images/img-1.png" alt="demo image">
+                <h2>John Doe</h2>
+                </section>
+                
+                <section class="about-container">
+                  <h4>About</h4>
+                  <p>Speaking about comparison of a number of the ground-breaking technology and strategic planning, a closer study of the sources and influences of the functional testing has more common features with The Enhancement of Large Leadership" (Eusebio Akin in The Book of the Entity Integrity)</p>
+                </section>
+
+                <section class="socials-container">
+                  <h4>Social Links</h4>
+                  <a href="#"><i class="fab fa-facebook social-icon"></i></a>
+                  <a href="#"><i class="fab fa-linkedin social-icon"></i></a>
+                  <a href="#"><i class="fab fa-twitter social-icon"></i></a>
+                  <a href="#"><i class="fab fa-instagram social-icon"></i></a>
+                </section>
+
+                <section class="quote-cotainer">
+                  <h4>Favourite Quote</h4>
+                  <p>
+                    You have some queer friends, Dorothy,' she said.The queerness doesn't matter, so long as they're friends,' was the answer
+                  </p>
+                </section>
+
+
+              </div>
+
+          <!-- END MAIN -->
+          </div>
+      </div>
+    </aside>
+</main>
 <!-- MAIN (Center website) -->
 <div class="main">
 
@@ -48,8 +89,11 @@
       </a>
       <div class="details-wrapper">
         <div class="details-container">
-          <p>John Doe</p>
-          <small>Dept. of Tech</small>
+          <span>
+            <p>John Doe</p>
+            <small>Dept. of Tech</small>
+          </span>
+          <i class="ri-arrow-right-circle-line modal-icon" id="modalIcon" onclick="document.getElementById('modal').style.display='block'"></i>
         </div>
       </div>
     </div>
