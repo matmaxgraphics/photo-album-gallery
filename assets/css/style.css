@@ -177,8 +177,12 @@ nav .nav-btn button:hover{
   position: absolute;
   bottom: 10px;
   display: flex;
-  flex-direction: column;
+  width: 100%;
+  justify-content: space-between;
 }
+/*.details-container main{
+  flex: 1;
+}*/
 .content .details-container p{
   font-weight: bold;
   color: #fff;
@@ -191,7 +195,8 @@ nav .nav-btn button:hover{
 .content .modal-icon{
   color: #fff;
   font-size: 32px;
-  margin-left: 100%;
+  margin-right: 36px;
+  cursor: pointer;
 }
 .link-btn{
   color: #000;
@@ -440,6 +445,9 @@ footer p{
 }
 
 @media only screen and (max-width: 460px){
+  .modal{
+    padding-top: 50px 12px 12px;
+  }
   .dialogue-box{
     width: 90%;    
   }
